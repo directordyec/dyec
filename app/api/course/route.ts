@@ -5,7 +5,7 @@ import { uploadToCloudinary, deleteFromCloudinary } from "../(lib)/cloudinary";
 import axios from "axios";
 import { PdfReader } from "pdfreader";
 
-const API_KEY = "AIzaSyCIFxqaCGYGBy3YJZFKMKVgMguOMBIX1k0"; // Your Gemini API key
+const API_KEY = process.env.GEMINI_API; // Your Gemini API key
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 // Helper function to extract text from PDF
